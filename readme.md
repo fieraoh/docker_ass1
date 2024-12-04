@@ -32,9 +32,9 @@ bd-a1/
 
 ## Setup Instructions
 
-1. Clone the repository:
+1. Clone the repository and switch to root dir:
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/fieraoh/docker_ass1
 cd bd-a1
 ```
 
@@ -58,7 +58,7 @@ docker run -it --name bd-container bd-processing
 
 3. Copy files into the container (if needed):
 ```bash
-docker cp <file> bd-container:/home/doc-bd-a1/
+docker cp <some-file> bd-container:/home/doc-bd-a1/
 ```
 
 ## Project Files Description
@@ -103,36 +103,3 @@ python3 load.py /home/doc-bd-a1/housing.csv
 chmod +x final.sh
 ./final.sh
 ```
-
-## Docker Hub Deployment
-
-1. Tag the image:
-```bash
-docker tag bd-processing <your-dockerhub-username>/bd-processing:latest
-```
-
-2. Push to Docker Hub:
-```bash
-docker login
-docker push <your-dockerhub-username>/bd-processing:latest
-```
-
-## Project Tasks Overview
-
-1. Data Preprocessing:
-   - Data Cleaning: Handling missing values, removing duplicates
-   - Data Transformation: Standardization, encoding
-   - Data Reduction: Feature selection
-   - Data Discretization: Binning numerical features
-
-2. Exploratory Data Analysis:
-   - Statistical analysis
-   - Distribution analysis
-   - Missing value analysis
-
-3. Visualization:
-   - Correlation heatmap
-
-4. Modeling:
-   - K-means clustering with k=3
-   - Cluster size analysis
