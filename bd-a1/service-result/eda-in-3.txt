@@ -1,0 +1,21 @@
+Data Distribution Analysis:
+
+longitude:
+Skewness: -0.29780120795241094
+Kurtosis: -1.3301523662288244
+
+housing_median_age:
+Skewness: 0.06033063759913681
+Kurtosis: -0.800628853586641
+
+total_rooms:
+Skewness: 4.147343450632158
+Kurtosis: 32.63092699920873
+
+median_income:
+Skewness: 1.6466567021344463
+Kurtosis: 4.952524101991511
+
+median_house_value:
+Skewness: 0.9777632739098341
+Kurtosis: 0.3278702429465872

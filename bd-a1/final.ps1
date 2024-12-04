@@ -1,12 +1,16 @@
-mkdir "./service-result"
+mkdir "./service-result" -Force
 
-# Copy files from container to local machine
-docker cp container_name:/home/doc-bd-a1/res_dpre.csv service-result/
-docker cp container_name:/home/doc-bd-a1/eda-in-1.txt service-result/
-docker cp container_name:/home/doc-bd-a1/eda-in-2.txt service-result/
-docker cp container_name:/home/doc-bd-a1/eda-in-3.txt service-result/
-docker cp container_name:/home/doc-bd-a1/vis.png service-result/
-docker cp container_name:/home/doc-bd-a1/k.txt service-result/
+$containerName = "bd-container"
 
-# Stop the container
-docker stop container_name
+docker cp "${containerName}:/home/doc-bd-a1/res_dpre.csv" 'service-result/'
+docker cp "${containerName}:/home/doc-bd-a1/eda-in-1.txt" 'service-result/'
+docker cp "${containerName}:/home/doc-bd-a1/eda-in-2.txt" 'service-result/'
+docker cp "${containerName}:/home/doc-bd-a1/eda-in-3.txt" 'service-result/'
+docker cp "${containerName}:/home/doc-bd-a1/vis.png" 'service-result/'
+docker cp "${containerName}:/home/doc-bd-a1/k.txt" 'service-result/'
+
+# Stop and remove the docker container
+docker stop $containerName
+docker rm $containerName
+
+Write-Host "Files copied and container removed successfully."

@@ -1,0 +1,12 @@
+Missing Values Analysis:
+longitude                         0
+housing_median_age                0
+total_rooms                       0
+median_income                     0
+median_house_value                0
+ocean_proximity_<1H OCEAN         0
+ocean_proximity_INLAND            0
+ocean_proximity_NEAR BAY          0
+ocean_proximity_NEAR OCEAN        0
+income_category                   0
+age_category                  10208

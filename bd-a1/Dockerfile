@@ -27,8 +27,9 @@ RUN mkdir -p /home/doc-bd-a1
 # Set wd
 WORKDIR /home/doc-bd-a1
 
-# Copy dataset
-COPY housing.csv /home/doc-bd-a1/
+# Copy dataset and scripts
+COPY ./housing.csv /home/doc-bd-a1/
+COPY ./scripts /home/doc-bd-a1/scripts
 
 # Set default command to bash
 CMD ["/bin/bash"]
